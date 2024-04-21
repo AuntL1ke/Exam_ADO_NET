@@ -1,0 +1,45 @@
+﻿<Window x:Class="Shop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookShop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="showBooks" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Load Books</Button>
+            <Button Click="showDisc"     Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Load Discounts</Button>
+
+            <Button Click="Update" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Update</Button>
+            <Button Click="Delete" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Delete</Button>
+            <Button Click="Buy" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Buy</Button>
+            <Button Click="showCustomers" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2" >Customers</Button>
+            <Button Click="showPurchases" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2" >Purchases</Button>
+
+
+            <!--<Button Click="showDiscounts" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Load Discounts</Button>
+            <Button Click="Fill" Padding="5" FontSize="16" Background="#FF3895FF" Foreground="White" BorderBrush="#FF082271" Margin="5" BorderThickness="2">Fill</Button>-->
+        </ToolBar>
+       <!-- <StackPanel x:Name="Content"> -->
+            
+      <!--  </StackPanel> -->
+        <StackPanel Orientation="Vertical" Margin="5">
+            
+            <Label Content="Genre:" VerticalAlignment="Center"/>
+            <TextBox x:Name="genreTextBox" Width="200" VerticalAlignment="Center"/>
+            <Button Content="Search" Click="SearchByGenre_Click" Margin="5" VerticalAlignment="Center"/>
+            <Label Content="Author:" VerticalAlignment="Center"/>
+            <TextBox x:Name="authorTextBox" Width="200" VerticalAlignment="Center"/>
+            <Button Content="Search" Click="SearchByAuthor_Click" Margin="5" VerticalAlignment="Center"/>
+            <Label Content="Title:" VerticalAlignment="Center"/>
+            <TextBox x:Name="titleTextBox" Width="200" VerticalAlignment="Center"/>
+            <Button Content="Search" Click="SearchByTitle_Click" Margin="5" VerticalAlignment="Center"/>
+        </StackPanel>
+       
+        <DataGrid x:Name="grid" Grid.Row="1">
+            
+        </DataGrid>
+
+    </DockPanel>
+</Window>
